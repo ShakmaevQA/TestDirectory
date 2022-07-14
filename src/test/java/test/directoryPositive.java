@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.files.DownloadActions.click;
+import static java.lang.Thread.sleep;
 
 public class directoryPositive {
 
@@ -27,10 +28,10 @@ public class directoryPositive {
         $("#inputPassword").setValue("Admin777!");
         $("#loginButton").click();
 
+        sleep(Long.parseLong("10000"));
+
         //Вход в справочники
-
-
-
+        $(byText("Закрыть")).click();
 
 
     }
