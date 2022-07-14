@@ -31,7 +31,7 @@ public class directoryPositive {
         sleep(Long.parseLong("10000"));
 
         //Вход в справочники
-        $(byText("Закрыть")).click();
+        $(".btn").click();
 
 
     }
