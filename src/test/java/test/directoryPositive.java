@@ -2,11 +2,12 @@ package test;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.browserSize;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.files.DownloadActions.click;
 import static java.lang.Thread.sleep;
 
@@ -28,13 +29,26 @@ public class directoryPositive {
         $("#inputPassword").setValue("Admin777!");
         $("#loginButton").click();
 
+        //Вход в систему
         sleep(Long.parseLong("10000"));
+        $(".btn").click();
+        $(".btn").click();
+        $(".btn").click();
 
         //Вход в справочники
-        $(".btn").click();
+        $(".spravochniki").click();
+        $(byText("Справочник ОКТМО")).click();
+
+
+
+
+
+
+
 
 
     }
+
 
 
 }
